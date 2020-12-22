@@ -1,0 +1,4 @@
+---
+roles:
+  - name: RedHatOfficial.rhel7_stig
+  - name: RedHatOfficial.rhel8_stig

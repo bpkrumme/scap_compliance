@@ -1,0 +1,17 @@
+---
+- name: check or apply the RHEL 7 STIG
+  hosts: all
+  tasks:
+    - name: apply the rhel7 stig to rhel 7
+      include_role:
+        name: RedHatOfficial.rhel7_stig
+      when:
+      - ansible_distribution == "RedHat"
+      - ansible_distribution_major_version == "7"
+
+    - name: apply the rhel8 stig to rhel 8
+      include_role:
+        name: RedHatOfficial.rhel8_stig
+      when:
+      - ansible_distribution == "RedHat"
+      - ansible_distribution_major_version == "8"
