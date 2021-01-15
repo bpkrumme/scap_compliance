@@ -2,6 +2,13 @@
 - name: check or apply the RHEL 7 STIG
   hosts: all
   tasks:
+    - name: apply the rhel6 stig to rhel6
+      include_role:
+        name: mindpointgroup.stig_rhel6
+      when:
+      - ansible_distribution == "RedHat"
+      - ansible_distribution_major_version == "6"
+      
     - name: apply the rhel7 stig to rhel 7
       include_role:
         name: RedHatOfficial.rhel7_stig
