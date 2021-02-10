@@ -3,11 +3,9 @@
   hosts: all
 
   roles:
-   - ansible-role-scap-client
+   - theforeman.foreman_scap_client
 
   tasks:
   - name: "Run SCAP Scan"
-    shell: "/usr/bin/foreman_scap_client {{ item.id }}"
-    loop: "{{ policy }}"
-    when: policy_scan == 'all' or item.name in policy_scan
+    shell: "/usr/bin/foreman_scap_client {{ foreman_scap_client_policies }}"
 
