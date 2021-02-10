@@ -60,7 +60,7 @@
 - name: Build tailoring content parameters
   set_fact:
     tailoring_files: "{{ tailoring_files | default({}) | combine({item.json.id: item.json }) }}"
-  when: item.json is defined
+  when: item.json.id is defined
   loop: "{{ tailoringfiles.results }}"
 
 - name: Apply openscap client configuration template
