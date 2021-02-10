@@ -1,5 +1,6 @@
 ---
-- hosts: "{{ HOSTS }}"
+- name: run a SCAP scan
+  hosts: all
 
   roles:
    - ansible-role-scap-client
