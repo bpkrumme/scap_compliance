@@ -11,7 +11,7 @@
     url: https://{{sat_server}}/api/v2/compliance/policies
     method: GET
     user: "{{sat_user}}"
-    password:  "{{sat_pass}}"
+    password:  "{{sat_password}}"
     force_basic_auth: yes
     body_format: json
     validate_certs: False
@@ -32,7 +32,7 @@
     url: https://{{sat_server}}/api/v2/compliance/scap_contents/{{item.scap_content_id}}
     method: GET
     user: "{{sat_user}}"
-    password: "{{sat_pass}}"
+    password: "{{sat_password}}"
     force_basic_auth: yes
     body_format: json
     validate_certs: False
@@ -44,7 +44,7 @@
     url: https://{{sat_server}}/api/v2/compliance/tailoring_files/{{item.tailoring_file_id}}
     method: GET
     user: "{{sat_user}}"
-    password: "{{sat_pass}}"
+    password: "{{sat_password}}"
     force_basic_auth: yes
     body_format: json
     validate_certs: False
