@@ -1,5 +1,6 @@
 ---
 roles:
+  - name: theforeman.foreman_scap_client
   - name: RedHatOfficial.rhel7_stig
   - name: RedHatOfficial.rhel8_stig
   - name: mindpointgroup.stig_rhel6
