@@ -1,5 +1,5 @@
 ---
-- hosts: "{{HOSTS}}"
+- hosts: "{{ HOSTS }}"
 
   roles:
    - ansible-role-scap-client
