@@ -5,14 +5,14 @@
     - role: mindpointgroup.stig_rhel6
       when:
       - ansible_os_family == "RedHat"
-      - ansible_distribution_major_version == '6'
+      - ansible_distribution_major_version == "6"
       
     - role: RedHatOfficial.rhel7_stig
       when:
       - ansible_os_family == "RedHat"
-      - ansible_distribution_major_version == '7'
+      - ansible_distribution_major_version == "7"
 
     - role: RedHatOfficial.rhel8_stig
       when:
       - ansible_os_family == "RedHat"
-      - ansible_distribution_major_version == '8'
+      - ansible_distribution_major_version == "8"
